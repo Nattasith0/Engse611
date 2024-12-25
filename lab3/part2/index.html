@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,54 +11,78 @@
             margin: 0;
             display: flex;
         }
+
         nav {
             width: 200px;
-            background-color: #f4f4f4;
+            background-color: #ddd7d7;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             height: 100vh;
         }
+
         nav a {
             display: block;
             color: #333;
             text-decoration: none;
             margin: 10px 0;
         }
+
         nav a:hover {
             color: #007BFF;
         }
+
         main {
             flex: 1;
             padding: 20px;
         }
+
         header {
             text-align: center;
             padding: 10px 0;
-            background-color: #007BFF;
+            background-color: #ffffff;
             color: white;
         }
+
         footer {
             text-align: center;
             padding: 10px 0;
-            background-color: #f4f4f4;
+            background-color: #d6d6d6;
             position: fixed;
             bottom: 0;
             width: 100%;
         }
+
         footer a {
             color: #007BFF;
             text-decoration: none;
             margin: 0 10px;
         }
+
         img {
-        width: 400px;
-        height: 450px;
-    }
-    .center-div {
-            text-align: center; 
+            width: 400px;
+            height: 450px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .center-div {
+            text-align: center;
+        }
+
+        .red {
+            color: rgb(8, 90, 241);
+        }
+
+        .green {
+            color: rgb(33, 174, 240);
+        }
+
+        .blue {
+            color: rgb(0, 217, 255);
         }
     </style>
 </head>
+
 <body>
     <nav>
         <a href="about.html">About Me</a>
@@ -66,16 +91,20 @@
     </nav>
     <main>
         <header>
-            <h1>Welcome to My Lab</h1>
+            <h1>
+                <span class="red ">Welcome</span>
+                <span class="green">to</span>
+                <span class="blue">My Lab</span>
+            </h1>
         </header>
         <div class="center-div">
-            <img src="https://i.pinimg.com/736x/ed/58/ae/ed58aeaadc95a59ffe8112d42563cf16.jpg" alt="photo of a cat">
+            <img src="https://i.pinimg.com/736x/ba/4f/83/ba4f83983ab9ce764446cb8bc988146a.jpg" alt="photo of a cat">
             <p class="caption">This the main content page. Click on the menu items to navigate to different sections</p>
         </div>
     </main>
     <footer>
         <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></a></p>
-        <p>Follow me on: 
+        <p>Follow me on:
             <a href="https://www.facebook.com/?locale=th_TH">Facebook</a></a>|
             <a href="https://www.tiktok.com/th-TH/">Tiktok</a></a>|
             <a href="https://www.instagram.com/">Instagram</a></a>
@@ -83,4 +112,5 @@
         <p>© 2024 My Lab</p>
     </footer>
 </body>
+
 </html>
