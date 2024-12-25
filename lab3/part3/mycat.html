@@ -5,18 +5,65 @@
     <title>My cat</title>
     <style>
         table, th, td{
-            border: 1px solid black;
-        }
-    </style>
+        border: 1px solid black;
+    }
+        body {
+         font-family: Arial, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f9f9f9;
+     }
+     nav {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: #dff5fa;
+         padding: 15px;
+         
+     }
+     nav a {
+         color: #6799f7;
+         text-decoration: none;
+         padding: 10px 15px;
+         text-align: center;
+     }
+     
+     nav a:hover {
+         background-color: #3292ff;
+         color: rgb(255, 255, 255);
+     }
+     main {
+         padding: 20px;
+         max-width: 900px;
+         margin: 20px auto;
+         background-color: white;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     }
+     h1, h2, p {
+         text-align: space-between;
+         color: #333;
+     }
+     img {
+         width: 250px; 
+         height: 250px; 
+         border-radius: 50%; 
+         object-fit: cover; 
+     }
+     .center-div {
+         text-align: center;
+     }
+     </style>
 </head>
 
 <body>
-
-    <header>
-        <nav id="home">
-            <h1>Pochi the Cat</h1>
-        </nav>
-    </header>
+    <nav>
+        <div class="center-links">
+            <a href="index.html"><b>Home</b></a> 
+            <a href="about1.html"><b>About Me</b></a>
+            <a href="hobby.html"><b>My Hobby</b></a>
+        </div>
+    </nav>
+   
 
     <main>
         <section id="home">
@@ -29,9 +76,9 @@
             <section id="aboutus">
                 <h2>Profile</h2>
                 <ul>
-                    <ol>1.favorite food-smoked salmon</ol>
-                    <ol>2.hobies-watching fishing on ESPN, snaking on garden flowers, monitoring the aptment parking lot</ol>
-                    <ol>3.hidden talent-Karaoke</ol>
+                    <p>1.favorite food-smoked salmon</p>
+                    <p>2.hobies-watching fishing on ESPN, snaking on garden flowers, monitoring the aptment parking lot</p>
+                    <p>3.hidden talent-Karaoke</p>
                 </ul>
             </section>
 
@@ -71,13 +118,5 @@
             </section>
         </article>
     </main>
-
-        <hr />
-
-        <footer id="content">
-            <p>Last upsated on 24 Dec 2024 by Nattasith Manochai</p>
-            <a href="index.html">Back to Home</a></a>
-        </footer>
-
 </body>
 </html>

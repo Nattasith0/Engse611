@@ -14,7 +14,7 @@
 
         nav {
             width: 200px;
-            background-color: #ddd7d7;
+            background-color: #dff5fa;
             padding: 20px;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             height: 100vh;
@@ -22,13 +22,15 @@
 
         nav a {
             display: block;
-            color: #333;
+            color: #6799f7;
+            padding: 5px;
             text-decoration: none;
             margin: 10px 0;
         }
 
         nav a:hover {
-            color: #007BFF;
+             background-color: #3292ff;
+             color: rgb(255, 255, 255);
         }
 
         main {
@@ -39,14 +41,14 @@
         header {
             text-align: center;
             padding: 10px 0;
-            background-color: #377dff;
-            color: rgb(3, 3, 3);
+            background-color: #ffffff;
+            color: white;
         }
 
         footer {
             text-align: center;
             padding: 10px 0;
-            background-color: #d6d6d6;
+            background-color: #d1f1f8;
             position: fixed;
             bottom: 0;
             width: 100%;
@@ -68,21 +70,40 @@
         .center-div {
             text-align: center;
         }
+
+        .red {
+            color: rgb(8, 90, 241);
+        }
+
+        .green {
+            color: rgb(33, 174, 240);
+        }
+
+        .blue {
+            color: rgb(0, 217, 255);
+        }
     </style>
 </head>
 
 <body>
     <nav>
-        <a href="about.html">About Me</a>
-        <a href="mycat.html">My Cat</a>
-        <a href="hobby.html">My Hobby</a>
+        <h2>
+            <span class="red">Menu</span>
+        </h2>
+        <a href="about1.html"><b>About Me</b></a>
+        <a href="mycat.html"><b>My Cat</b></a>
+        <a href="hobby.html"><b>My Hobby</b></a>
     </nav>
     <main>
         <header>
-            <h1> Welcome To My Lab </h1>
+            <h1>
+                <span class="red ">Welcome</span>
+                <span class="green">to</span>
+                <span class="blue">My Lab</span>
+            </h1>
         </header>
         <div class="center-div">
-            <img src="cat1.jpg" alt="photo of a cat">
+            <img src="G.jpg" alt="photo of a cat">
             <p class="caption">This the main content page. Click on the menu items to navigate to different sections</p>
         </div>
     </main>
