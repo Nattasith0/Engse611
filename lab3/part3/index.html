@@ -14,9 +14,7 @@
 
         nav {
             width: 200px;
-            background-color: #dff5fa;
             padding: 20px;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
             height: 100vh;
         }
 
@@ -25,13 +23,21 @@
             color: #6799f7;
             padding: 5px;
             text-decoration: none;
+            border: 2px solid #6799f7;
             margin: 10px 0;
             border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         nav a:hover {
              background-color: #3292ff;
              color: rgb(255, 255, 255);
+             font-size: 1.2em;
+             transform: scale(1.05);
+        }
+        nav a span {
+            margin-right: 10px; 
         }
 
         main {
@@ -83,6 +89,9 @@
         .blue {
             color: rgb(0, 217, 255);
         }
+        h2 {
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -91,9 +100,9 @@
         <h2>
             <span class="red">Menu</span>
         </h2>
-        <a href="about.html"><b>About Me</b></a>
-        <a href="mycat.html"><b>My Cat</b></a>
-        <a href="hobby.html"><b>My Hobby</b></a>
+        <a href="about.html"><span>👤</span><b>About Me</b></a>
+        <a href="mycat.html"><span>🐱</span><b>My Cat</b></a>
+        <a href="hobby.html"><span>⚽</span><b>My Hobby</b></a>
     </nav>
     <main>
         <header>
