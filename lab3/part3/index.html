@@ -140,6 +140,27 @@
         h2 {
             text-align: center;
         }
+        .snowflake {
+            position: absolute;
+            top: -50px;
+            color: rgba(173, 216, 230, 0.8);
+            font-size: 1em;
+            animation-name: fall;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(100vh) translateX(-10px);
+            }
+        }
+
+
+
 
     </style>
 </head>
@@ -160,6 +181,7 @@
             <img src="G.jpg" alt="photo of a cat">
             <p class="caption">This the main content page. Click on the menu items to navigate to different sections</p>
         </div>
+        
     </main>
     <footer>
         <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></a></p>
@@ -170,6 +192,29 @@
         </p>
         <p>© 2024 My Lab</p>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const body = document.querySelector("body");
+
+            function createSnowflake() {
+                const snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                snowflake.textContent = "❄";
+                snowflake.style.left = Math.random() * 100 + "vw";
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; 
+                snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+
+                body.appendChild(snowflake);
+
+                setTimeout(() => {
+                    snowflake.remove();
+                }, 5000); 
+            }
+
+            setInterval(createSnowflake, 200); 
+        });
+        
+    </script>
 </body>
 
 </html>
