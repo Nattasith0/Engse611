@@ -11,13 +11,13 @@
             margin: 0;
             display: flex;
         }
-
+        
         nav {
             width: 200px;
             padding: 20px;
             height: 100vh;
         }
-
+        
         nav a {
             display: block;
             color: #6799f7;
@@ -32,20 +32,21 @@
             transition: border-color 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease;
             animation: borderColorChange 6s infinite ease-in-out;
         }
-
+        
         nav a:hover {
             transform: translateX(10px) scale(1.05);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
+        
         nav a span {
-            margin-right: 10px; 
+            margin-right: 10px;
         }
-
+        
         main {
             flex: 1;
             padding: 20px;
         }
-
+        
         header {
             text-align: center;
             padding: 10px 0;
@@ -53,6 +54,7 @@
             color: rgb(255, 255, 255);
             border-radius: 10px;
         }
+        
         footer {
             text-align: center;
             padding: 10px 0;
@@ -61,54 +63,49 @@
             bottom: 0;
             width: 100%;
         }
-
+        
         footer a {
             color: #007BFF;
             text-decoration: none;
             margin: 0 10px;
         }
-
+        
         @keyframes borderColorChange {
             0% {
-                border-color: #00aaff; 
+                border-color: #00aaff;
             }
             25% {
-                border-color: #00dbfd; 
+                border-color: #00dbfd;
             }
             50% {
-                border-color: #5b82aa; 
+                border-color: #5b82aa;
             }
             75% {
-                border-color: #2b83db; 
+                border-color: #2b83db;
             }
             100% {
-                border-color: #0038ef;  
+                border-color: #0038ef;
             }
         }
-
+        
         @keyframes textWaveEffect {
             0% {
                 background-image: linear-gradient(90deg, #00aaff, #0066cc, #003366);
             }
-
             25% {
                 background-image: linear-gradient(90deg, #0099ff, #33ccff, #3366cc);
             }
-
             50% {
                 background-image: linear-gradient(90deg, #bcf5a6, #4dff5f, #00ff2a);
             }
-
             75% {
                 background-image: linear-gradient(90deg, #9966cc, #6633cc, #330066);
             }
-
             100% {
                 background-image: linear-gradient(90deg, #00aaff, #0066cc, #003366);
             }
         }
-
-
+        
         img {
             width: 400px;
             height: 450px;
@@ -119,20 +116,22 @@
             transition: border-color 0.6s ease, transform 0.3s ease;
             animation: borderColorChange 6s infinite ease-in-out;
         }
-
+        
         .center-div {
             text-align: center;
             animation: slideIn 1.2s ease-in-out;
         }
-
+        
         h1 {
             text-align: center;
             color: rgb(69, 127, 236);
         }
+        
         h2 {
             text-align: center;
             color: black;
         }
+        
         .snowflake {
             position: absolute;
             top: -50px;
@@ -142,7 +141,7 @@
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
-
+        
         @keyframes fall {
             0% {
                 transform: translateY(0);
@@ -151,33 +150,30 @@
                 transform: translateY(100vh) translateX(-10px);
             }
         }
-
-
-
-
     </style>
 </head>
 
 <body>
     <nav>
-            <h2 style="color: rgb(43, 113, 212); text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Menu</h2>
+        <h2 style="color: rgb(43, 113, 212); text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Menu</h2>
         <a href="about.html"><span>👤</span><b>About Me</b></a>
         <a href="mycat.html"><span>🐱</span><b>My Cat</b></a>
         <a href="hobby.html"><span>⚽</span><b>My Hobby</b></a>
     </nav>
     <main>
         <header>
-                <h1>Welcome to My Lab</h1>
+            <h1>Welcome to My Lab</h1>
         </header>
-        
+
         <div class="center-div">
             <img src="G.jpg" alt="photo of a cat">
             <p class="caption">This the main content page. Click on the menu items to navigate to different sections</p>
         </div>
-        
+
     </main>
     <footer>
-        <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></a></p>
+        <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></a>
+        </p>
         <p>Follow me on:
             <a href="https://www.facebook.com/?locale=th_TH">Facebook</a></a>|
             <a href="https://www.tiktok.com/th-TH/">Tiktok</a></a>|
@@ -186,7 +182,7 @@
         <p>© 2024 My Lab</p>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const body = document.querySelector("body");
 
             function createSnowflake() {
@@ -194,19 +190,18 @@
                 snowflake.classList.add("snowflake");
                 snowflake.textContent = "❄";
                 snowflake.style.left = Math.random() * 100 + "vw";
-                snowflake.style.animationDuration = Math.random() * 3 + 2 + "s"; 
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
                 snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
 
                 body.appendChild(snowflake);
 
                 setTimeout(() => {
                     snowflake.remove();
-                }, 5000); 
+                }, 5000);
             }
 
-            setInterval(createSnowflake, 200); 
+            setInterval(createSnowflake, 200);
         });
-        
     </script>
 </body>
 
