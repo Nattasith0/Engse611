@@ -15,19 +15,20 @@
             background-color: #f9f9f9;
         }
         nav {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #dff5fa;
-            padding: 15px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             animation: waveColors 5s infinite;
+             padding: 15px;
          
         }
         nav a {
-            color: #6799f7;
-            text-decoration: none;
-            padding: 10px 15px;
-            text-align: center;
-            border-radius: 12px;
+            color: #000000;
+             text-decoration: none;
+             padding: 10px 15px;
+             text-align: center;
+             border-radius: 12px;
+             background: rgba(0, 0, 0, 0.2);
         }
      
         nav a:hover {
@@ -56,6 +57,25 @@
             text-align: center;
         }
         
+        
+        @keyframes waveColors {
+            0% {
+                background-color: #dff5fa; /* Light Cyan */
+            }
+            25% {
+                background-color: #a1dff7; /* Sky Blue */
+            }
+            50% {
+                background-color: #5fc3e4; /* Cool Blue */
+            }
+            75% {
+                background-color: #a1dff7; /* Sky Blue */
+            }
+            100% {
+                background-color: #dff5fa; /* Light Cyan */
+            }
+        }
+
      </style>
 </head>
 
