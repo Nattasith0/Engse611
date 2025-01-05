@@ -10,51 +10,132 @@
             font-family: Arial, sans-serif;
             margin: 0;
             display: flex;
-        }
-        
-        nav {
-            width: 200px;
-            padding: 20px;
             height: 100vh;
+            overflow: hidden;
+            background-color: #f5f7fb;
+        }
+
+        .sidebar {
+            background-color: #d4f4f7;
+            color: #fff;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            width: 80px;
+        }
+
+        .sidebar.collapsed {
+            width: 80px;
         }
         
-        nav a {
+        .sidebar.collapsed .logo h1 {
+            opacity: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #8aafef;
+        }
+
+        .menu-item i {
+            font-size: 1.2rem;
+            margin-right: 20px;
+        }
+
+        .menu-item span {
+            font-size: 1rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .sidebar.collapsed .menu-item span {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-item:hover .tooltip {
             display: block;
-            color: #6799f7;
-            padding: 5px;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #2d3748;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background-color: #1a202c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            color: #000000;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            position: relative;
             text-decoration: none;
-            border: 2px solid #6799f7;
-            margin: 10px 0;
-            border-radius: 12px;
-            text-align: center;
-            font-size: 1.1em;
-            background: rgba(255, 255, 255, 0.4);
-            transition: border-color 0.6s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            animation: borderColorChange 6s infinite ease-in-out;
+            background-color: transparent;
+            border: none;
+            border-radius: 100px;
         }
-        
-        nav a:hover {
-            transform: translateX(10px) scale(1.05);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+        .menu-item i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #63b3ed;
+            transition: transform 0.3s ease;
+            background-color: transparent;
+            border: none;
         }
-        
-        nav a span {
-            margin-right: 10px;
-        }
-        
+
         main {
             flex: 1;
             padding: 20px;
         }
-        
+
         header {
             text-align: center;
             padding: 10px 0;
-            background-color: #ffffff;
             color: rgb(255, 255, 255);
             border-radius: 10px;
         }
-        
+
         footer {
             text-align: center;
             padding: 10px 0;
@@ -63,49 +144,13 @@
             bottom: 0;
             width: 100%;
         }
-        
+
         footer a {
             color: #007BFF;
             text-decoration: none;
             margin: 0 10px;
         }
-        
-        @keyframes borderColorChange {
-            0% {
-                border-color: #00aaff;
-            }
-            25% {
-                border-color: #00dbfd;
-            }
-            50% {
-                border-color: #5b82aa;
-            }
-            75% {
-                border-color: #2b83db;
-            }
-            100% {
-                border-color: #0038ef;
-            }
-        }
-        
-        @keyframes textWaveEffect {
-            0% {
-                background-image: linear-gradient(90deg, #00aaff, #0066cc, #003366);
-            }
-            25% {
-                background-image: linear-gradient(90deg, #0099ff, #33ccff, #3366cc);
-            }
-            50% {
-                background-image: linear-gradient(90deg, #bcf5a6, #4dff5f, #00ff2a);
-            }
-            75% {
-                background-image: linear-gradient(90deg, #9966cc, #6633cc, #330066);
-            }
-            100% {
-                background-image: linear-gradient(90deg, #00aaff, #0066cc, #003366);
-            }
-        }
-        
+
         img {
             width: 400px;
             height: 450px;
@@ -116,22 +161,17 @@
             transition: border-color 0.6s ease, transform 0.3s ease;
             animation: borderColorChange 6s infinite ease-in-out;
         }
-        
+
         .center-div {
             text-align: center;
             animation: slideIn 1.2s ease-in-out;
         }
-        
-        h1 {
+
+        h1, h2 {
             text-align: center;
             color: rgb(69, 127, 236);
         }
-        
-        h2 {
-            text-align: center;
-            color: black;
-        }
-        
+
         .snowflake {
             position: absolute;
             top: -50px;
@@ -141,11 +181,12 @@
             animation-timing-function: linear;
             animation-iteration-count: infinite;
         }
-        
+
         @keyframes fall {
             0% {
                 transform: translateY(0);
             }
+
             100% {
                 transform: translateY(100vh) translateX(-10px);
             }
@@ -154,11 +195,25 @@
 </head>
 
 <body>
-    <nav>
-        <h2 style="color: rgb(43, 113, 212); text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Menu</h2>
-        <a href="about.html"><span>👤</span><b>About Me</b></a>
-        <a href="mycat.html"><span>🐱</span><b>My Cat</b></a>
-        <a href="hobby.html"><span>⚽</span><b>My Hobby</b></a>
+    <nav class="sidebar" id="sidebar">
+
+        <h2>Menu</h2>
+
+        <a href="about.html" class="menu-item">
+            <i>👤</i>
+            <span>About Me</span>
+            <div class="tooltip">Learn more about me</div>
+        </a>
+        <a href="mycat.html" class="menu-item">
+            <i>🐱</i>
+            <span>My Cat</span>
+            <div class="tooltip">See my adorable cat</div>
+        </a>
+        <a href="hobby.html" class="menu-item">
+            <i>⚽</i>
+            <span>My Hobby</span>
+            <div class="tooltip">Discover my hobbies</div>
+        </a>
     </nav>
     <main>
         <header>
@@ -182,7 +237,7 @@
         <p>© 2024 My Lab</p>
     </footer>
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const body = document.querySelector("body");
 
             function createSnowflake() {
@@ -192,16 +247,25 @@
                 snowflake.style.left = Math.random() * 100 + "vw";
                 snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
                 snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
-
                 body.appendChild(snowflake);
-
                 setTimeout(() => {
                     snowflake.remove();
                 }, 5000);
             }
-
             setInterval(createSnowflake, 200);
         });
+
+        const sidebar = document.getElementById('sidebar');
+
+        sidebar.addEventListener('mouseenter', () => {
+            sidebar.classList.remove('collapsed');
+        });
+
+        sidebar.addEventListener('mouseleave', () => {
+            sidebar.classList.add('collapsed');
+        });
+
+
     </script>
 </body>
 
