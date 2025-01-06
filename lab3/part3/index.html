@@ -139,16 +139,29 @@
         footer {
             text-align: center;
             padding: 10px 0;
-            background-color: #d1f1f8;
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            background-color: #f0faff;
+            color: #333;
+            border-top: 2px solid #96d8ff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            flex-wrap: wrap;
+
         }
 
         footer a {
             color: #007BFF;
             text-decoration: none;
             margin: 0 10px;
+
         }
 
         @keyframes borderColorChange {
@@ -247,14 +260,13 @@
 
     </main>
     <footer>
-        <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></a>
-        </p>
+        <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></p>
         <p>Follow me on:
-            <a href="https://www.facebook.com/?locale=th_TH">Facebook</a></a>|
-            <a href="https://www.tiktok.com/th-TH/">Tiktok</a></a>|
-            <a href="https://www.instagram.com/">Instagram</a></a>
+            <a href="https://www.facebook.com/?locale=th_TH">Facebook</a>
+            <a href="https://www.tiktok.com/th-TH/">Tiktok</a>
+            <a href="https://www.instagram.com/">Instagram</a>
         </p>
-        <p>© 2024 My Lab</p>
+        
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
