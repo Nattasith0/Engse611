@@ -151,6 +151,28 @@
             margin: 0 10px;
         }
 
+        @keyframes borderColorChange {
+            0% {
+                border-color: #6799f7;
+            }
+
+            25% {
+                border-color: #ff6347;
+            }
+
+            50% {
+                border-color: #32cd32;
+            }
+
+            75% {
+                border-color: #ff9900;
+            }
+
+            100% {
+                border-color: #6799f7;
+            }
+        }
+
         img {
             width: 400px;
             height: 450px;
@@ -192,20 +214,6 @@
                 transform: translateY(100vh) translateX(-10px);
             }
         }
-
-        .fade-out {
-            animation: fadeOut 0.5s forwards;
-        }
-
-        @keyframes fadeOut {
-            from {
-                opacity: 1;
-            }
-
-            to {
-                opacity: 0;
-            }
-        }
     </style>
 </head>
 
@@ -217,17 +225,14 @@
         <a href="about.html" class="menu-item">
             <i>👤</i>
             <span>About Me</span>
-            <div class="tooltip">Learn more about me</div>
         </a>
         <a href="mycat.html" class="menu-item">
             <i>🐱</i>
             <span>My Cat</span>
-            <div class="tooltip">See my adorable cat</div>
         </a>
         <a href="hobby.html" class="menu-item">
             <i>⚽</i>
             <span>My Hobby</span>
-            <div class="tooltip">Discover my hobbies</div>
         </a>
     </nav>
     <main>
@@ -279,26 +284,6 @@
         sidebar.addEventListener('mouseleave', () => {
             sidebar.classList.add('collapsed');
         });
-
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuItems = document.querySelectorAll('.menu-item');
-
-            menuItems.forEach(item => {
-                item.addEventListener('click', function (event) {
-                    event.preventDefault(); 
-                    const targetUrl = this.getAttribute('href'); 
-
-                    document.body.classList.add('fade-out');
-
-                    setTimeout(() => {
-                        window.location.href = targetUrl;
-                    }, 500); 
-                });
-            });
-        });
-
-
     </script>
 </body>
 
