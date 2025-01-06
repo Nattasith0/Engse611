@@ -35,7 +35,7 @@
         .sidebar.collapsed {
             width: 80px;
         }
-        
+
         .sidebar.collapsed .logo h1 {
             opacity: 0;
         }
@@ -167,7 +167,8 @@
             animation: slideIn 1.2s ease-in-out;
         }
 
-        h1, h2 {
+        h1,
+        h3 {
             text-align: center;
             color: rgb(69, 127, 236);
         }
@@ -191,13 +192,27 @@
                 transform: translateY(100vh) translateX(-10px);
             }
         }
+
+        .fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
 
 <body>
     <nav class="sidebar" id="sidebar">
 
-        <h2>Menu</h2>
+        <h3>Menu</h3>
 
         <a href="about.html" class="menu-item">
             <i>👤</i>
@@ -263,6 +278,24 @@
 
         sidebar.addEventListener('mouseleave', () => {
             sidebar.classList.add('collapsed');
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuItems = document.querySelectorAll('.menu-item');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function (event) {
+                    event.preventDefault(); 
+                    const targetUrl = this.getAttribute('href'); 
+
+                    document.body.classList.add('fade-out');
+
+                    setTimeout(() => {
+                        window.location.href = targetUrl;
+                    }, 500); 
+                });
+            });
         });
 
 
