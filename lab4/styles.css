@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji&display=swap');
+
+:root{
+    --darkblue: #1F2937;
+    --secondarytxt-size: 18px;
+    --secondarytxt-color: #E5E7EB;
+    /* Button and CTA background color */
+    --accent-color: #3882F6;
+    /* Quote BG Color */
+    --quoteBG: #E5E7EB;
+    /* Hero Height */
+    --sectionheight: 500px;
+    /* Logo Text & Hero Title Color */
+    --logo-hero-color: #F9FAF8;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+  }
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #edf6fa;
+}
+
+h2{
+    
+}
+
+h3{
+
+}
+
+nav{
+    border-bottom: 1px solid #dee2e6;
+    background-color: #8bb6f3;
+    padding: auto;
+    width: auto;
+}
+
+.container{
+
+}
+
+.navbar .container{
+
+}
+
+.navbar .img{
+    
+}
+
+.navbar .logo{
+
+}
+
+.navbar ul{
+    padding: 20px;
+    float: right;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul a{
+    text-decoration: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.hero{
+    height: var(--sectionheight);
+    background-color: var(--darkblue);
+    color: var(--logo-hero-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 220px;
+}
+
+.hero .container{
+
+}
+
+.hero h2{
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.hero p{
+    
+}
+
+.hero .hero-bold-text{
+
+}
+
+.hero img{
+
+}
+
+.hero .hero-button{
+    display: block;
+
+}
+
+.hero .hero-button:hover{
+
+}
+
+.info{
+
+}
+
+.info .container{
+    display: flex;
+
+}
+
+.info .info-header{
+
+}
+
+.info .boxes{
+    display: flex;
+
+}
+
+.info .box{
+    flex: 1 1 135px;
+}
+
+.info img{
+
+}
+
+.info .box h3{
+
+}
+
+.info .box p{
+   
+}
+
+.quote{
+    display: flex;
+
+}
+
+.quote .container{
+    display: flex;
+
+}
+
+.quote h3{
+ 
+}
+
+.quote .quote-attribution{
+    
+}
+
+.CTA{
+
+}
+
+.CTA .container{
+    display: flex;
+
+}
+
+.CTA .CTA-main-text{
+
+}
+
+.CTA .CTA-secondary-text{
+ 
+    
+}
+
+.CTA .CTA-button{
+
+}
+
+.CTA .CTA-button:hover{
+ 
+}
+
+.footer{
+    background-color: #1F2937;
+}
+
+.footer .container{
+    
+}
+
+.footer a{
+    
+}
+
+.nerd{
+    font-family: 'Noto Color Emoji', sans-serif;
+}
+
+
+
+@media(max-width: 768px){
+
+    .navbar{
+        height: 120px;
+    }
+
+    .navbar .container{
+        display: block;
+    }
+
+    .navbar .logo{
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .hero .container{
+        flex-direction: column;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .hero .hero-text-container{
+        margin-bottom: 60px;
+    }
+
+    .hero .container img{
+        padding: 62.5px 62.5px 62.5px 62.5px;
+        display: none;
+    }
+
+    .hero .hero-button{
+        margin: 35px auto 0px auto;
+    }
+
+    .hero h2{
+        text-align: left;
+    }
+
+    .hero p{
+        text-align: left;
+    }
+
+    .info .box p{
+        white-space: inherit;
+    }
+
+    .quote{
+        padding: 0px;
+    }
+
+    .quote h3{
+        font-size: 20px;
+        margin-top: 60px;
+        font-weight: 400;
+    }
+
+    .quote .quote-attribution{
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .CTA{
+        align-items: flex-start;
+    }
+
+    .CTA .container{
+        flex-direction: column;
+        min-height: 100%;
+        border-radius: 0;
+    }
+
+    .footer .container a{
+        font-size: 0.93rem;
+    }
+}

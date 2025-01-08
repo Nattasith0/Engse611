@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+             font-family: Arial, sans-serif;
+             margin: 0;
+             padding: 0;
+             background-color: #f9f9f9;
+             justify-content: center;
+             align-items: center;
+             height: 100vh;
+
+         }
+         nav {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             animation: waveColors 5s infinite;
+             padding: 15px;
+         }
+         nav a {
+             color: #000000;
+             text-decoration: none;
+             padding: 10px 15px;
+             text-align: center;
+             border-radius: 12px;
+             background: rgba(0, 0, 0, 0.2);
+         }
+         
+         nav a:hover {
+             background-color: #3292ff;
+             color: #FFFFFF;
+         }
+         main {
+             padding: 20px;
+             max-width: 900px;
+             margin: 20px auto;
+             background-color: white;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+         }
+         h1 {
+            text-align: center;
+            color: #333;
+            font-size: 2em;
+            padding: 8px 20px; 
+            border: 2px solid #3292ff; 
+            border-radius: 10px; 
+            display: inline-block; 
+            background: linear-gradient(90deg, #dff5fa, #a1dff7); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+         }
+         p {
+            text-align: center;
+            color: #333333;
+        }
+         
+         img {
+             width: 250px; 
+             height: 250px; 
+             border-radius: 50%; 
+             object-fit: cover; 
+         }
+         .center-div {
+             text-align: center;
+         }
+
+         @keyframes waveColors {
+            0% {
+                background-color: #dff5fa;
+            }
+            25% {
+                background-color: #a1dff7;
+            }
+            50% {
+                background-color: #5fc3e4; 
+            }
+            75% {
+                background-color: #a1dff7; 
+            }
+            100% {
+                background-color: #dff5fa; 
+            }
+        }
+         </style>
+    </head>
+    <body>
+        <nav>
+            <div class="center-links">
+                <a href="index.html"><b>Home</b></a> 
+                <a href="about.html"><b>About Me</b></a>
+                <a href="mycat.html"><b>My Cat</b></a>
+            </div>
+        </nav>
+        <div class="center-div">
+            <h1>My Hobby</h1>
+        </div>
+        
+        <div class="center-div"><img src="3.jpg" alt="Profile" class="center-div"/></div>
+        <p>เป็นคนที่ค่อนข้างเกียจคร้าน เฉื่อยชา ชอบเล่นแต่เกมเป็นชีวิตจิตใจ เขาไม่ได้สนใจในการเล่นฟุตบอลมาก่อน เขาเพียงแค่อยากใช้ชีวิตสบายไปวัน ๆ และเมื่อเข้าร่วม Blue Lock เขาก็ยังมองข้ามการฝึกซ้อมและไปเล่นวิดีโอเกมแทน</p>
+        
+    </body>
+</html>

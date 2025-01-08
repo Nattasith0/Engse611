@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAb 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #f5f7fb;
+        }
+
+        .sidebar {
+            background-color: #d4f4f7;
+            color: #fff;
+            width: 250px;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            transition: width 0.3s ease;
+        }
+
+        .sidebar.collapsed {
+            width: 80px;
+        }
+
+        .sidebar.collapsed {
+            width: 80px;
+        }
+
+        .sidebar.collapsed .logo h1 {
+            opacity: 0;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #8aafef;
+        }
+
+        .menu-item i {
+            font-size: 1.2rem;
+            margin-right: 20px;
+        }
+
+        .menu-item span {
+            font-size: 1rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .sidebar.collapsed .menu-item span {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+
+        .menu-item:hover .tooltip {
+            display: block;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            left: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #2d3748;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            white-space: nowrap;
+            font-size: 0.9rem;
+        }
+
+        .toggle-btn {
+            position: absolute;
+            top: 20px;
+            right: -20px;
+            background-color: #1a202c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            cursor: pointer;
+            color: #000000;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            position: relative;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            border-radius: 100px;
+        }
+
+        .menu-item i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            color: #63b3ed;
+            transition: transform 0.3s ease;
+            background-color: transparent;
+            border: none;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px 0;
+            color: rgb(255, 255, 255);
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            background-color: #f0faff;
+            color: #333;
+            border-top: 2px solid #96d8ff;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            flex-wrap: wrap;
+
+        }
+
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 10px;
+
+        }
+
+        @keyframes borderColorChange {
+            0% {
+                border-color: #6799f7;
+            }
+
+            25% {
+                border-color: #ff6347;
+            }
+
+            50% {
+                border-color: #32cd32;
+            }
+
+            75% {
+                border-color: #ff9900;
+            }
+
+            100% {
+                border-color: #6799f7;
+            }
+        }
+
+        img {
+            width: 400px;
+            height: 450px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #6799f7;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: border-color 0.6s ease, transform 0.3s ease;
+            animation: borderColorChange 6s infinite ease-in-out;
+        }
+
+        .center-div {
+            text-align: center;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+            color: rgb(69, 127, 236);
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -50px;
+            color: rgba(147, 209, 230, 0.8);
+            font-size: 1em;
+            animation-name: fall;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100vh) translateX(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="sidebar" id="sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="about.html" class="menu-item">
+            <i>👤</i>
+            <span>About Me</span>
+        </a>
+        <a href="mycat.html" class="menu-item">
+            <i>🐱</i>
+            <span>My Cat</span>
+        </a>
+        <a href="hobby.html" class="menu-item">
+            <i>⚽</i>
+            <span>My Hobby</span>
+        </a>
+    </nav>
+    <main>
+        <header>
+            <h1>Welcome to My Lab</h1>
+        </header>
+
+        <div class="center-div">
+            <img src="G.jpg" alt="photo of a cat">
+            <p class="caption">This the main content page. Click on the menu items to navigate to different sections</p>
+        </div>
+
+    </main>
+    <footer>
+        <p>Contact me: <a href="https://th.y8.com/">examp@example.com</a></p>
+        <p>Follow me on:
+            <a href="https://www.facebook.com/?locale=th_TH">Facebook</a> |
+            <a href="https://www.tiktok.com/th-TH/">Tiktok</a> |
+            <a href="https://www.instagram.com/">Instagram</a>
+        </p>
+        
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const body = document.querySelector("body");
+
+            function createSnowflake() {
+                const snowflake = document.createElement("div");
+                snowflake.classList.add("snowflake");
+                snowflake.textContent = "❄";
+                snowflake.style.left = Math.random() * 100 + "vw";
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + "s";
+                snowflake.style.fontSize = Math.random() * 10 + 10 + "px";
+                body.appendChild(snowflake);
+                setTimeout(() => {
+                    snowflake.remove();
+                }, 5000);
+            }
+            setInterval(createSnowflake, 200);
+        });
+
+        const sidebar = document.getElementById('sidebar');
+
+        sidebar.addEventListener('mouseenter', () => {
+            sidebar.classList.remove('collapsed');
+        });
+
+        sidebar.addEventListener('mouseleave', () => {
+            sidebar.classList.add('collapsed');
+        });
+    </script>
+</body>
+
+</html>
