@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Noto+Emoji&display=swap");
+
+:root {
+  --darkblue: #1f2937;
+  --secondarytxt-size: 18px;
+  --secondarytxt-color: #e5e7eb;
+  /* Button and CTA background color */
+  --accent-color: #3882f6;
+  /* Quote BG Color */
+  --quoteBG: #e5e7eb;
+  /* Hero Height */
+  --sectionheight: 500px;
+  /* Logo Text & Hero Title Color */
+  --logo-hero-color: #f9faf8;
+  --darkblue: #1F2937;
+  --lightgray: #E5E7EB;
+  --accent-color: #3882F6;
+  --white: #F9FAF8;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+body {
+  color: var(--darkblue);
+  background-color: white;
+  line-height: 1.6;
+}
+
+h2 {
+}
+
+h3 {
+}
+
+nav {
+  display: flex;
+  background-color: #f9faf8;
+  padding-left: 220px;
+  padding-right: 220px;
+  height: auto;
+  justify-content: space-between;
+}
+
+.container {
+}
+
+.navbar .container {
+  color: #f9faf8;
+
+}
+
+.navbar .img {
+}
+
+.navbar .logo {
+}
+
+.navbar ul {
+  margin-top: 9px;
+  float: right;
+  display: flex;
+}
+
+.navbar ul a {
+  padding: 20px;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 220px;
+    padding-right: 220px;
+    background-color: var(--darkblue);
+    color: var(--white);
+    height: 500px;
+
+}
+
+.hero .container {
+}
+
+.hero h2 {
+    font-size: 48px;
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--lightgray);
+    margin-bottom: 20px;
+}
+
+.hero .hero-bold-text {
+}
+
+.hero img {
+  margin-left: 100px;
+  float: right;
+  width: 310px;
+}
+
+.hero .hero-button {
+  margin-top: 20px;
+    display: block;
+    padding: 10px 40px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.hero .hero-button:hover {
+}
+
+.info {
+    text-align: center;
+}
+
+.info .container {
+  padding: 20px;
+}
+
+.info .info-header {
+  text-align: center;
+  color: #1F2937;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.info .boxes {
+  display: flex;
+  justify-content:space-between;
+  padding-left: 190px;
+  padding-right: 190px;
+  padding-bottom: 50px;
+}
+
+.info .box {
+  flex: 1 1 135px;
+}
+
+.info img {
+  width: 240px;
+  padding: 10px;
+  border: #3882F6 solid;
+  border-radius: 10px;
+  aspect-ratio: 1 / 1;
+}
+
+.info .box h3 {
+}
+
+.info .box p {
+}
+
+.quote {
+  display: flex;
+  background-color: #E5E7EB;
+}
+
+.quote .container {
+  padding: 100px 220px;
+}
+
+.quote h3 {
+  font-size: 36px;
+  font-style: italic;
+  color: #1F2937;
+  font-weight: lighter;
+}
+
+.quote .quote-attribution {
+  font-size: 36px;
+  font-style: italic;
+  color: #1F2937;
+  float: right;
+}
+
+.CTA {
+}
+
+.CTA .container {
+  display: flex;
+  margin: 100px 250px;
+  justify-content: space-around;
+  background-color: #3882F6;
+  padding: 40px ;
+  border-radius: 20px;
+}
+
+.CTA .CTA-main-text {
+  color: #E5E7EB;
+}
+
+.CTA .CTA-secondary-text {
+  color: #E5E7EB;
+}
+
+.CTA .CTA-button {
+  float: right;
+  color: #E5E7EB;
+  background-color: #3882F6;
+  border: #E5E7EB solid;
+  border-radius: 10px;
+  padding: 10px 30px;
+}
+
+.CTA .CTA-button:hover {
+}
+
+.footer {
+  width: auto;
+  background-color: #1f2937;
+  padding: 20px;
+  height: auto;
+}
+
+.footer .container {
+  text-align: center;
+}
+
+.footer a {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+.nerd {
+  font-family: "Noto Color Emoji", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    height: 120px;
+  }
+
+  .navbar .container {
+    display: block;
+  }
+
+  .navbar .logo {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .hero .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .hero .hero-text-container {
+    margin-bottom: 60px;
+  }
+
+  .hero .container img {
+    padding: 62.5px 62.5px 62.5px 62.5px;
+    display: none;
+  }
+
+  .hero .hero-button {
+    margin: 35px auto 0px auto;
+  }
+
+  .hero h2 {
+    text-align: left;
+  }
+
+  .hero p {
+    text-align: left;
+  }
+
+  .info .box p {
+    white-space: inherit;
+  }
+
+  .quote {
+    padding: 0px;
+  }
+
+  .quote h3 {
+    font-size: 20px;
+    margin-top: 60px;
+    font-weight: 400;
+  }
+
+  .quote .quote-attribution {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+
+  .CTA {
+    align-items: flex-start;
+  }
+
+  .CTA .container {
+    flex-direction: column;
+    min-height: 100%;
+    border-radius: 0;
+  }
+
+  .footer .container a {
+    font-size: 0.93rem;
+  }
+}
