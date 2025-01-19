@@ -2,89 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KSTech</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav class="navbar">
-        <img src="kstech logo.png" alt="KSTech Logo"> 
-        <div class="nav-links">
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Who We Serve</a>
+    <header class="navbar" aria-label="Main Navigation">
+        <div class="container">
+            <a href="#" class="navbar-logo">
+                <img src="kstech logo.png" alt="KSTech Logo">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#about" aria-label="Learn more about us">About</a></li>
+                    <li><a href="#services" aria-label="View our services">Services</a></li>
+                    <li><a href="#clients" aria-label="See who we serve">Who We Serve</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
         </div>
-    </nav>
-    
+    </header>
 
     <section class="hero">
         <div class="container">
-            .
-            <div class="hero-text-container">
-                <h2 class="hero-main-text">IT problems make you want to pull your hair out?</h2>
-                <p class="hero-secondary-text">
-                    Let KSTech be the hair tie that holds your company together! Our team of experts 
-                    will fix all your technical woes with a side of humor. Whether you need a website built or your network secured, 
-                    we'll get the job done with a smile. And with our clear communication, you'll always know what's happening, no 
-                    tech jargon allowed! So why stress, when you can laugh and schedule a call with KSTech today?
+            <div class="hero-text">
+                <h1 class="hero-title">Tired of IT Headaches?</h1>
+                <p class="hero-description">
+                    At KSTech, we simplify your technical challenges with innovative solutions. 
+                    Let’s transform your IT into a seamless experience.
                 </p>
-                <button class="hero-button" aria-label="Schedule a call with KSTech">Schedule a Call</button>
+                <a href="#contact" class="hero-button" aria-label="Schedule a call with KSTech">Schedule a Call</a>
             </div>
-            <img src="gridsmalldark.svg" alt="Hero illustration" class="hero-image">
-        </div>
-    </section>
-
-    <section class="info">
-        <div class="container">
-            <h3 class="info-header">Stay Up, Stay Running, Stay Protected</h3>
-            <div class="boxes">
-                <div class="box">
-                    <img src="noun-data-backup.svg" alt="Backup and Recovery Icon" />
-                    <p class="box-text">Backup and Recovery</p>
-                </div>
-                <div class="box">
-                    <img src="noun-secure.svg" alt="Cybersecurity Icon" />
-                    <p class="box-text">Cybersecurity</p>
-                </div>
-                <div class="box">
-                    <img src="noun-internet.svg" alt="Managed IT Services Icon" />
-                    <p class="box-text">Managed IT Services</p>
-                </div>
-                <div class="box">
-                    <img src="noun-bill-gates.svg" alt="Microsoft 365 Icon" />
-                    <p class="box-text">Microsoft 365</p>
-                </div>
+            <div class="hero-image-container">
+                <img src="gridsmalldark.svg" alt="Team working on IT solutions" class="hero-image">
             </div>
         </div>
     </section>
 
-    <section class="quote">
+    <section id="services" class="services">
         <div class="container">
-            <h3 class="quote-text">"I have been working with KSTech for over a year now and I can confidently 
-                say that they are top-notch in their field. Their technicians are not only highly skilled but also 
-                excellent communicators. They always explain technical issues in a way that is easy for me to understand, 
-                without using any jargon. They have helped me with everything from setting up my network to troubleshooting 
-                software issues. I can rely on them to get the job done quickly and efficiently. I highly recommend KSTech to anyone in need of IT support."</h3>
-            <p class="quote-attribution">- Jared Bolo, President ACME Inc.</p>
-        </div>
-    </section>
-
-    <section class="CTA">
-        <div class="container">
-            <div class="container-text">
-                <h4 class="CTA-main-text">Say goodbye to tech headaches and hello to seamless IT support!</h4>
-                <p class="CTA-secondary-text">Contact us now and experience the difference with clear communication and expert technicians.</p>
+            <h2 class="section-title">Our Services</h2>
+            <div class="service-boxes">
+                <div class="service-box">
+                    <img src="noun-data-backup.svg" alt="Backup and Recovery" />
+                    <h3>Backup and Recovery</h3>
+                    <p>Secure your data with reliable backup and restoration solutions.</p>
+                </div>
+                <div class="service-box">
+                    <img src="noun-secure.svg" alt="Cybersecurity" />
+                    <h3>Cybersecurity</h3>
+                    <p>Protect your business from digital threats with robust security.</p>
+                </div>
+                <div class="service-box">
+                    <img src="noun-internet.svg" alt="Managed IT Services" />
+                    <h3>Managed IT Services</h3>
+                    <p>End-to-end IT support to keep your systems running smoothly.</p>
+                </div>
+                <div class="service-box">
+                    <img src="noun-bill-gates.svg" alt="Microsoft 365" />
+                    <h3>Microsoft 365</h3>
+                    <p>Boost productivity with seamless Microsoft 365 integration.</p>
+                </div>
             </div>
-            <button class="CTA-button" aria-label="Contact KSTech">Contact Us</button>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <a href="https://github.com/jaredbradley243/" target="_blank" rel="noreferrer noopener">
-                <p>Made with &#10084;&#65039; by an engineering <span class="nerd">🤓</span></p>
-            </a>
+            <p>© 2025 KSTech | Made with ❤️ by <a href="https://github.com/jaredbradley243/" target="_blank">Jared Bradley</a></p>
         </div>
     </footer>
 </body>
