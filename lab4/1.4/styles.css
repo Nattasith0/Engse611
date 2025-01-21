@@ -125,12 +125,12 @@ body {
 
 .hero-image {
     flex: 1;
-    display: none;
+    display: flex;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     margin-left: 100px;
     float: right;
-    width: 310px;
+    width: 300px;
 }
 
 .services {
@@ -208,6 +208,55 @@ body {
     font-size: 0.9rem;
     color: var(--text-color);
 }
+
+.quote {
+    display: flex;
+    background-color: #E5E7EB;
+  }
+  
+  .quote .container {
+    padding: 100px 220px;
+  }
+  
+  .quote h3 {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    font-weight: lighter;
+  }
+  
+  .quote .quote-attribution {
+    font-size: 36px;
+    font-style: italic;
+    color: #1F2937;
+    float: right;
+  }
+
+  .CTA .container {
+    display: flex;
+    margin: 100px 250px;
+    justify-content: space-around;
+    background-color: #3882F6;
+    padding: 40px ;
+    border-radius: 20px;
+  }
+  
+  .CTA .CTA-main-text {
+    color: #E5E7EB;
+  }
+  
+  .CTA .CTA-secondary-text {
+    color: #E5E7EB;
+  }
+  
+  .CTA .CTA-button {
+    float: right;
+    color: #E5E7EB;
+    background-color: #3882F6;
+    border: #E5E7EB solid;
+    border-radius: 10px;
+    padding: 10px 30px;
+  }
 
 .footer {
     background-color: var(--text-color);
