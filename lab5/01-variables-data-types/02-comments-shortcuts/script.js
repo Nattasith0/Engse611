@@ -1,12 +1,10 @@
-console.log("Hello world"); 
-console.log(2+9);
-console.log("answer: "+23.96+7);
+// This is a single line of code
 
-const cat="Dog";
-let dog;
+/*
+Multi-line comment
+console.log(100);
 
-dog ="Cat";
-console.log(cat);
-console.log(dog);
+console.log('Hello World');
 
-// Log number
+console.log(20, 'Hello', true);
+*/
