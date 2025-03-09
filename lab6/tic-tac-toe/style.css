@@ -1,38 +1,82 @@
-/**
- See: CSS Variables
- https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
-**/
 :root {
-    --grid-size: 450px;
-    --margin-size: 10px;
-    --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
-  }
-  
-  body {
-    font-family: sans-serif;
-  }
-  
-  #grid {
-    align-content: space-between;
-    background-color: rgba(0,0,0,0.5);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: var(--grid-size);
-    width: var(--grid-size);
-  }
-  
-  #grid div {
-    background-color: white;
-    height: var(--square-size);
-    width: var(--square-size);
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  #grid div img {
-    width: 100%;
-  }
-  
+  --grid-size: 450px;
+  --margin-size: 10px;
+  --square-size: calc((var(--grid-size) / 3) - var(--margin-size));
+  --primary-color: #2ec4b6;
+  --secondary-color: #cbf3f0;
+  --text-color: #ffffff;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #2ec4b6, #cbf3f0);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.scoreboard {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+#grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--grid-size);
+  height: var(--grid-size);
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+#grid div {
+  background-color: var(--secondary-color);
+  width: var(--square-size);
+  height: var(--square-size);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+#grid div:hover {
+  transform: scale(1.1);
+}
+
+#grid div.x {
+  color: red;
+}
+
+#grid div.o {
+  color: blue;
+}
+
+#reset {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border: none;
+  color: var(--text-color);
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#reset:hover {
+  background-color: #2adace;
+}

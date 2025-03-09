@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing the DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<Style>
+    #parent {
+    padding: 20px;
+    border: 2px solid black;
+    width: 300px;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.highlight {
+    background-color: rgb(0, 229, 255);
+}
+
+</Style>
+<body>
+
+    <h1>Exercise 7: Traversing the DOM</h1>
+
+    <div id="parent">
+        <p id="first-child">First Child</p>
+        <p id="second-child">Second Child</p>
+        <button onclick="traverseDOM()">Highlight Parent & Siblings</button>
+    </div>
+
+    <script src="Challenge7.js"></script> 
+</body>
+</html>
