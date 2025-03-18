@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.gallery {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.myImage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.myImage img {
+  width: 80px;
+  height: 120px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.myImage img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(0, 255, 242);
+}
+
+.main-image img {
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+}
